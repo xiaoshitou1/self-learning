@@ -89,5 +89,22 @@ public class StreamInAction {
                         t1.getValue() < t2.getValue() ? t1 : t2);
         Transaction transaction = min.get();
         System.out.println(transaction);
+
+
+
+
+        System.out.println("++++++++++++++++");
+        //(3) 查找所有来自于剑桥的交易员，并按姓名排序。
+        //除非流水线上触发一个终端操作，否则中间操作不会执行任何处理
+        transactions.stream()
+                .map(d -> {
+                            System.out.println("map>>" + d.getTrader());
+                            return d.getTrader();
+                         })
+                .filter(trader-> {
+                                   System.out.println("filter>>" + trader);
+                                    return trader.getCity().equals("Cambridge");
+                                   });
+
     }
 }
