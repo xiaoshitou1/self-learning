@@ -6,7 +6,7 @@ package com.study.concurrency.chapter1;
 public class SingletonObject5 {
 
     /**
-     * volatile 不能保证原子性，但是可以保证内粗你的可见性，也保证有序性
+     * volatile 不能保证原子性，但是可以保证内存的可见性，也保证有序性
      */
     private static volatile SingletonObject5 instance;
 

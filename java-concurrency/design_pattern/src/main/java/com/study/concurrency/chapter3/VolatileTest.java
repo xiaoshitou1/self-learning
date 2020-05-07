@@ -1,7 +1,7 @@
 package com.study.concurrency.chapter3;
 
 public class VolatileTest {
-    private volatile  static int INIT_VALUE = 0;
+    private volatile static int INIT_VALUE = 0;
 
     private final static int MAX_VALUE = 5;
 
